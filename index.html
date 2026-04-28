@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanam — For You, Always</title>
+  <meta name="description" content="A gift made with love, for the one who holds my heart.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💕</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       FLOATING PARTICLES (persistent throughout)
+       ═══════════════════════════════════════════ -->
+  <div id="particles" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════
+       ENTRANCE — The Gift Unwrap
+       ═══════════════════════════════════════════ -->
+  <div id="entrance">
+    <div class="entrance-bg"></div>
+    <div class="entrance-content">
+      <p class="entrance-pretext">I made something for you</p>
+      <h1 class="entrance-title">Sanam</h1>
+      <p class="entrance-meaning">/ beloved /</p>
+      <button id="open-gift" aria-label="Open your gift">
+        <span class="btn-text">Open Your Gift</span>
+        <span class="btn-glow"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Transition flash overlay -->
+  <div id="transition-flash" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════
+       MAIN CONTENT (hidden until gift is opened)
+       ═══════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ── HERO ──────────────────────────────── -->
+    <section id="hero" class="section">
+      <div class="section-inner">
+        <span class="hero-badge">April 28, 2026</span>
+        <h2 class="hero-heading">Happy 6 Months</h2>
+        <p class="hero-name">My Maneef <span class="heart">♥</span></p>
+        <div class="hero-divider">
+          <span></span>
+          <span class="divider-heart">❤</span>
+          <span></span>
+        </div>
+        <p class="hero-message">
+          Six months of you, and I'd choose every single moment again.<br>
+          This is my little corner of the internet, made just for you —<br>
+          to hold everything I feel but sometimes forget to say.
+        </p>
+      </div>
+      <div class="scroll-hint">
+        <span>scroll down, there's more</span>
+        <div class="scroll-arrow">
+          <svg width="20" height="30" viewBox="0 0 20 30">
+            <path d="M10 0 L10 24 M4 18 L10 24 L16 18" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── OUR MOMENTS / TIMELINE ────────────── -->
+    <section id="timeline" class="section">
+      <div class="section-inner">
+        <h2 class="section-title reveal">Six Months of Us</h2>
+        <p class="section-subtitle reveal">Every moment, a little universe of its own</p>
+
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+
+          <!-- ✏️ CUSTOMIZE: Add your moments below. Change photos and captions! -->
+          <div class="timeline-item reveal" data-side="left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-photo" style="--placeholder-hue: 340">
+                <!-- Replace src with your photo: e.g., assets/photos/first-day.jpg -->
+                <img src="assets/photos/photo1.png" alt="Our first moment" onerror="this.style.display='none'">
+              </div>
+              <div class="timeline-text">
+                <span class="timeline-date">The Beginning</span>
+                <p>Where it all started — the moment everything changed.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal" data-side="right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-photo" style="--placeholder-hue: 320">
+                <img src="assets/photos/photo2.png" alt="A special moment" onerror="this.style.display='none'">
+              </div>
+              <div class="timeline-text">
+                <span class="timeline-date">Getting Closer</span>
+                <p>The conversations that never wanted to end.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal" data-side="left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-photo" style="--placeholder-hue: 280">
+                <img src="assets/photos/photo3.png" alt="Together" onerror="this.style.display='none'">
+              </div>
+              <div class="timeline-text">
+                <span class="timeline-date">Us, Official</span>
+                <p>When "you and me" became "us" — Sanam.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal" data-side="right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-photo" style="--placeholder-hue: 260">
+                <img src="assets/photos/photo4.png" alt="This moment" onerror="this.style.display='none'">
+              </div>
+              <div class="timeline-text">
+                <span class="timeline-date">Right Now</span>
+                <p>Six months in, and still falling every day.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── GALLERY ───────────────────────────── -->
+    <section id="gallery" class="section">
+      <div class="section-inner">
+        <h2 class="section-title reveal">Moments I Hold Close</h2>
+        <p class="section-subtitle reveal">Every photo is a feeling I never want to forget</p>
+
+        <div class="gallery-grid">
+          <!-- ✏️ CUSTOMIZE: Replace src with your photos -->
+          <div class="gallery-item reveal" style="--placeholder-hue: 350">
+            <img src="assets/photos/photo5.png" alt="" onerror="this.style.display='none'">
+          </div>
+          <div class="gallery-item gallery-item--tall reveal" style="--placeholder-hue: 330">
+            <img src="assets/photos/photo6.png" alt="" onerror="this.style.display='none'">
+          </div>
+          <div class="gallery-item reveal" style="--placeholder-hue: 310">
+            <img src="assets/photos/photo7.png" alt="" onerror="this.style.display='none'">
+          </div>
+          <div class="gallery-item gallery-item--wide reveal" style="--placeholder-hue: 290">
+            <img src="assets/photos/photo1.png" alt="" onerror="this.style.display='none'">
+          </div>
+          <div class="gallery-item reveal" style="--placeholder-hue: 270">
+            <img src="assets/photos/photo2.png" alt="" onerror="this.style.display='none'">
+          </div>
+          <div class="gallery-item reveal" style="--placeholder-hue: 340">
+            <img src="assets/photos/photo3.png" alt="" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── LOVE LETTERS ──────────────────────── -->
+    <section id="letters" class="section">
+      <div class="section-inner">
+        <h2 class="section-title reveal">Words From My Heart</h2>
+        <p class="section-subtitle reveal">Things I want you to read whenever you need me close</p>
+
+        <div class="letters-container">
+          <!-- ✏️ CUSTOMIZE: Edit or add more letters below -->
+          <div class="letter-card reveal">
+            <div class="letter-envelope" role="button" tabindex="0" aria-label="Open this letter" data-letter="0">
+              <div class="envelope-flap"></div>
+              <div class="envelope-body">
+                <span class="envelope-label">For Maneef</span>
+                <span class="envelope-icon">💌</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="letter-card reveal">
+            <div class="letter-envelope" role="button" tabindex="0" aria-label="Open this letter" data-letter="1">
+              <div class="envelope-flap"></div>
+              <div class="envelope-body">
+                <span class="envelope-label">Read When You Miss Me</span>
+                <span class="envelope-icon">🤍</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── OUR SONGS ─────────────────────────── -->
+    <section id="songs" class="section">
+      <div class="section-inner">
+        <h2 class="section-title reveal">Our Soundtrack</h2>
+        <p class="section-subtitle reveal">The songs that sound like us</p>
+
+        <div class="songs-list" id="songs-list">
+          <!-- Songs are generated by script.js from the playlist config -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CLOSING ───────────────────────────── -->
+    <section id="closing" class="section">
+      <div class="section-inner closing-inner">
+        <div class="closing-glow"></div>
+        <h2 class="closing-title reveal">Here's to Us</h2>
+
+        <div class="love-counter reveal">
+          <p class="counter-label">We've been in love for</p>
+          <div class="counter-display">
+            <div class="counter-unit">
+              <span id="counter-days" class="counter-number">0</span>
+              <small>days</small>
+            </div>
+            <div class="counter-sep">:</div>
+            <div class="counter-unit">
+              <span id="counter-hours" class="counter-number">0</span>
+              <small>hours</small>
+            </div>
+            <div class="counter-sep">:</div>
+            <div class="counter-unit">
+              <span id="counter-minutes" class="counter-number">0</span>
+              <small>minutes</small>
+            </div>
+            <div class="counter-sep">:</div>
+            <div class="counter-unit">
+              <span id="counter-seconds" class="counter-number">0</span>
+              <small>seconds</small>
+            </div>
+          </div>
+        </div>
+
+        <p class="closing-message reveal">
+          Six months might sound like just a number,<br>
+          but with you, every day has been its own little universe.
+        </p>
+        <p class="closing-message closing-message--small reveal">
+          Thank you for being my laughter, my calm, my chaos, my home.<br>
+          This isn't just a website — it's a tiny piece of everything I feel for you,<br>
+          laid out in pixels because words alone could never be enough.
+        </p>
+        <p class="closing-message reveal">
+          Here's to every 28th, and to all the forevers in between.
+        </p>
+
+        <p class="closing-sign reveal">
+          I love you, Maneef.<br>
+          <span class="closing-always">Always and completely.</span>
+        </p>
+        <p class="closing-signature reveal">— Your Sajal ♥</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       PERSISTENT MUSIC PLAYER BAR
+       ═══════════════════════════════════════════ -->
+  <div id="player-bar" class="player-bar">
+    <audio id="audio-element" preload="auto"></audio>
+    <div class="player-inner">
+      <div class="player-info">
+        <div class="player-art" id="player-art"></div>
+        <div class="player-details">
+          <span class="player-song-title" id="player-song-title">No song selected</span>
+          <span class="player-song-artist" id="player-song-artist"></span>
+        </div>
+      </div>
+      <div class="player-controls">
+        <button id="prev-btn" class="player-btn" aria-label="Previous song">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3 2h2v12H3V2zm3 6l8 6V2L6 8z"/></svg>
+        </button>
+        <button id="play-btn" class="player-btn player-btn--play" aria-label="Play/Pause">
+          <svg class="icon-play" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M5 3l12 7-12 7V3z"/></svg>
+          <svg class="icon-pause" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" style="display:none"><path d="M5 3h3v14H5V3zm7 0h3v14h-3V3z"/></svg>
+        </button>
+        <button id="next-btn" class="player-btn" aria-label="Next song">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M11 2h2v12h-2V2zm-1 6L2 14V2l8 6z"/></svg>
+        </button>
+      </div>
+      <div class="player-progress-wrap">
+        <div class="player-progress" id="player-progress">
+          <div class="player-progress-fill" id="player-progress-fill"></div>
+        </div>
+        <span class="player-time" id="player-time">0:00 / 0:00</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       LIGHTBOX (for gallery photos)
+       ═══════════════════════════════════════════ -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" aria-label="Previous photo">&#8249;</button>
+    <button class="lightbox-next" aria-label="Next photo">&#8250;</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       LETTER READER MODAL
+       ═══════════════════════════════════════════ -->
+  <div id="letter-reader" class="letter-reader" role="dialog" aria-hidden="true">
+    <div class="letter-reader-backdrop"></div>
+    <div class="letter-reader-inner">
+      <div class="letter-paper" id="letter-paper-content">
+        <!-- Content injected by JS -->
+      </div>
+    </div>
+    <button class="letter-reader-close" id="letter-reader-close" aria-label="Close letter">✕</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
